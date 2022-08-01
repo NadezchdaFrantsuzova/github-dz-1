@@ -15,21 +15,21 @@ public class SalesManager {
         return max;
     }
 
-    public int medium(int max){
+    public long medium(long max){
 
-        int min = sales[0];
-        for (int sale : sales) {
+        long min = sales[0];
+        for (long sale : sales) {
             if (sale < sales[0]) {
                 min = sale;
             }
         }
 
-        int sum = 0;
-        for (int sale : sales){
+        long sum = 0;
+        for (long sale : sales){
             sum += sale;
         }
         
-        int medium = (sum - max - min) / (sales.length - 2);
+        long medium = (sum - max - min) / (sales.length - 2);
         return medium;
     }
 }
